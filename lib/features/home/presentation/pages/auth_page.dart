@@ -1,10 +1,10 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../providers/home_navigation_provider.dart';
 
 class AuthPage extends ConsumerWidget {
-  const AuthPage({super.key});
+  final String name;
+  const AuthPage({required this.name, super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -15,7 +15,7 @@ class AuthPage extends ConsumerWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text("AuthPage"),
+            Text("AuthPage: получил параметр $name"),
             SizedBox(height: 30),
             ElevatedButton(
               onPressed: () => homeNavService.navigateToHome(context),
@@ -27,4 +27,3 @@ class AuthPage extends ConsumerWidget {
     );
   }
 }
-

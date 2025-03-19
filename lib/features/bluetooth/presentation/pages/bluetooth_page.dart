@@ -1,7 +1,6 @@
 import 'package:a15/core/providers/navigation_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../providers/bluetooth_navigation_provider.dart';
 
 class BluetoothPage extends ConsumerWidget {
   const BluetoothPage({super.key});

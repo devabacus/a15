@@ -6,8 +6,8 @@ import '../routing/home_routes_constants.dart';
 
 class HomeNavigationService {
 
-  void navigateToAuth(BuildContext context) {
-    context.goNamed(HomeRoutes.auth);
+  void navigateToAuth(BuildContext context, String name) {
+    context.goNamed(HomeRoutes.auth, pathParameters: {'name': name});
   }
 
   
