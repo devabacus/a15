@@ -1,3 +1,4 @@
+import '../../presentation/pages/auth_page.dart';
 
 import '../../presentation/pages/home_page.dart';
 import 'home_routes_constants.dart';
@@ -9,6 +10,13 @@ import 'package:go_router/go_router.dart';
 
 List<RouteBase> getHomeRoutes() {
   return [
+
+  GoRoute(
+    name: HomeRoutes.auth,
+    path: HomeRoutes.authPath,
+    builder: (BuildContext context, state) => AuthPage(),
+),
+
     GoRoute(
       name: HomeRoutes.home,
       path: HomeRoutes.homePath,
